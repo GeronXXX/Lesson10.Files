@@ -1,0 +1,13 @@
+{
+		"name": "Computer - Galaxy",
+		"сreator": "Ivan",
+		"raw": "32",
+		"cpu": "AMD Ryzen 7 7700x",
+		"gpu": "Nvidia RTX 3080",
+		"pbo": true,
+		"mbManufacturer": [
+			"ASUS",
+			"GIGABYTE",
+			"MSI"
+		]
+}

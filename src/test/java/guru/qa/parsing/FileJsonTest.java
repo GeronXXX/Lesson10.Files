@@ -1,5 +1,6 @@
 package guru.qa.parsing;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Assertions;
@@ -10,16 +11,15 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class FileJsonTest {
-
     private ClassLoader cl = FileZipTest.class.getClassLoader();
     @Test
     @Description("Проверка JSON файла")
 
     void readGameFromJsonTest() throws Exception {
-        Gson gson = new Gson();
+        ObjectMapper gson = new ObjectMapper();
         try (InputStream is = cl.getResourceAsStream("PC.json");
              InputStreamReader isr = new InputStreamReader(is)) {
-             Pc pc = gson.fromJson(isr, Pc.class);
+             Pc pc = gson.readValue(isr, Pc.class);
 
             Assertions.assertEquals("Computer - Galaxy", pc.name);
             Assertions.assertEquals("Ivan", pc.сreator);

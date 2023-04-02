@@ -16,7 +16,6 @@ import java.util.zip.ZipInputStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FileZipTest {
-
     private ClassLoader cl = FileZipTest.class.getClassLoader();
 
     @Test
@@ -33,7 +32,6 @@ public class FileZipTest {
             }
         }
     }
-
     @Test
     @Description("Проверка XLS файла")
     void zipXlsTest() throws Exception {
